@@ -28,20 +28,38 @@
 
 // Getting there but not quite...
 
-{
-    const ModSquad = {
-        "members": ["Pete Cochran", "Linc Hayes", "Julie Barnes", "Capt. Adam Greer", "Chief Barney Metcalf"]
+// {
+//     const ModSquad = {
+//         "members": ["Pete Cochran", "Linc Hayes", "Julie Barnes", "Capt. Adam Greer", "Chief Barney Metcalf"]
+//         "series": {
+//             "start": "1968",
+//             "end": "1973"
+//         }
+//     }
+
+//     document.getElementById("container").innerHTML += `<h1>The Mod Squad</h1>`
+
+//     ModSquad.members.forEach(member => {
+//         const HTMLRepresentation += `<div>${member}</div>`
+//     })
+// }
+
+// document.querySelector(".show-info").innerHTML = HTMLRepresentation
+
+// Starting over!
+
+
+const ModSquad = {
+    "members": ["Pete Cochran", "Linc Hayes", "Julie Barnes", "Capt. Adam Greer", "Chief Barney Metcalf"],
         "series": {
             "start": "1968",
             "end": "1973"
         }
     }
 
-    document.getElementById("container").innerHTML += `<h1>The Mod Squad</h1>`
-
-    ModSquad.members.forEach(member => {
-        const HTMLRepresentation += `<div>${member}</div>`
+    const HTMLRepresentation = document.querySelector("#container")
+    HTMLRepresentation.innerHTML += `<h1>The Mod Squad</h1>`
+    
+    ModSquad.members.forEach(members => {
+        HTMLRepresentation.innerHTML += `<div>${members}</div>`    
     })
-}
-
-document.querySelector(".show-info").innerHTML = HTMLRepresentation
